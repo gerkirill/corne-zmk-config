@@ -9,9 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT_L 0
-#define SYMBOLS_L 1
-#define ARROWS_L  2
-#define NUMBERS_L 3
+#define NUM_L 1
+#define SYM_L  2
+#define RSYM_L  3
+#define BLT_L  4
+#define ARR_L 5
 
 / {
     behaviors {
@@ -31,38 +33,38 @@
 
         a {
             bindings = <&kp ESCAPE>;
-            key-positions = <2 1>;
+            key-positions = <3 2>;
         };
 
-        b {
-            bindings = <&kp CLCK>;
-            key-positions = <14 13>;
-        };
+        // b {
+        //     bindings = <&kp CLCK>;
+        //     key-positions = <14 13>;
+        // };
 
-        c {
-            bindings = <&kp TAB>;
-            key-positions = <26 25>;
-        };
+        // c {
+        //     bindings = <&kp TAB>;
+        //     key-positions = <26 25>;
+        // };
 
         d {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <10 9>;
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <19 6>;
         };
 
-        e {
-            bindings = <&kp ENTER>;
-            key-positions = <22 21>;
-        };
+        // e {
+        //     bindings = <&kp ENTER>;
+        //     key-positions = <22 21>;
+        // };
 
-        f {
-            bindings = <&kp MINUS>;
-            key-positions = <19 20>;
-        };
+        // f {
+        //     bindings = <&kp MINUS>;
+        //     key-positions = <19 20>;
+        // };
 
-        g {
-            bindings = <&kp EQUAL>;
-            key-positions = <21 20>;
-        };
+        // g {
+        //     bindings = <&kp EQUAL>;
+        //     key-positions = <21 20>;
+        // };
 
         h {
             bindings = <&sys_reset>;
@@ -81,40 +83,60 @@
         default_layer {
             label = "0";
             bindings = <
-&kp ESC       &kp Q  &kp W  &kp E      &kp R        &kp T                 &kp Y                &kp U           &kp I      &kp O    &kp P     &kp BSPC
-&kp CAPSLOCK  &kp A  &kp S  &kp D      &kp F        &kp G                 &kp H                &kp J           &kp K      &kp L    &kp SEMI  &kp RET
-&kp TAB       &kp Z  &kp X  &kp C      &kp V        &kp B                 &kp N                &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &lt 3 SQT  &lt 2 SPACE  &mt LCTRL LEFT_WIN    &lt SYMBOLS_L SPACE  &kp LEFT_SHIFT  &kp SQT
+&none  &kp Q       &kp W       &kp E        &kp R            &kp T                 &kp Y   &kp U          &kp I         &kp O         &kp P           &none
+&none  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F     &kp G                 &kp H   &hm RSHIFT J   &hm RCTRL K   &hm LALT L    &hm RGUI SEMI   &none
+&none  &kp Z       &kp X       &kp C        &kp V            &kp B                 &kp N   &kp M          &kp COMMA     &kp DOT       &kp FSLH        &none
+                            &kp CLCK  &lt SYM_L SPACE  &lt NUM_L TAB         &lt ARR_L RET  &lt RSYM_L BSPC  &kp SQT
             >;
         };
 
         number_layer {
             label = "1";
             bindings = <
-&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
-&none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
-&none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
-                       &none   &none   &none     &none   &none   &none
+&none  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
+&none  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &none
+&none  &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp PSCRN   &none
+                                        &none   &none   &none     &none   &none   &none
+            >;
+        };
+
+        symbol_layer {
+            label = "2";
+            bindings = <
+&none  &kp ESC     &kp RBKT  &kp RPAR  &kp RBRC  &kp GT      &none       &none   &none  &none  &kp LBKT  &none
+&none  &kp CLCK    &kp LBKT  &kp LPAR  &kp LBRC  &kp LT      &none       &none   &none  &none  &kp SQT   &none
+&none  &kp LC(Z)   &kp LC(X) &kp LC(C) &kp LC(V) &none       &none       &none   &none  &none  &kp BSLH  &none
+                                       &none   &none   &none     &none   &none   &none
+            >;
+        };
+
+         rsymbol_layer {
+            label = "3";
+            bindings = <
+&none  &none   &none   &none   &none   &none      &none   &none   &none   &none  &kp RBKT  &none
+&none  &none   &none   &none   &none   &none      &none   &none   &none   &none  &kp GRAVE &none
+&none  &none   &none   &none   &none   &none      &none   &none   &none   &none  &kp PIPE  &none
+                                 &none   &none   &none     &none   &none   &none
             >;
         };
 
         bt_layer {
-            label = "2";
+            label = "4";
             bindings = <
-&kp ESC       &kp N1        &kp N2          &kp N3        &kp N4        &kp N5         &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
-&none         &none         &kp LEFT_ARROW  &kp DEL       &kp RIGHT     &bt BT_CLR     &none   &none   &none   &none   &none   &none
-&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bootloader    &none   &none   &none   &none   &none   &none
-                                            &none         &none         &none          &none   &none   &none
+&none       &kp N1        &kp N2          &kp N3        &kp N4        &kp N5         &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+&none       &none         &kp LEFT_ARROW  &kp DEL       &kp RIGHT     &bt BT_CLR     &none   &none   &none   &none   &none   &none
+&none       &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bootloader    &none   &none   &none   &none   &none   &none
+                                       &none   &none   &none     &none   &none   &none
             >;
         };
 
         arrow_layer {
-            label = "3";
+            label = "5";
             bindings = <
-&none  &none           &kp UP_ARROW    &none      &sys_reset  &none    &none  &none  &none  &none  &none  &none
-&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none       &none    &none  &none  &none  &none  &none  &none
-&none  &none           &none           &none      &none       &none    &none  &none  &none  &none  &none  &none
-                                       &none      &none       &none    &none  &none  &none
+&none  &none           &none     &none      &sys_reset  &none    &none           &none           &none          &none      &none    &none
+&none  &none           &none     &none      &none       &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &none    &none
+&none  &none           &none     &none      &none       &none    &kp DEL         &kp HOME        &kp END        &none      &none    &none
+                                         &none   &none   &none     &none   &none   &none
             >;
         };
     };

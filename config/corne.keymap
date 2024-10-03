@@ -45,6 +45,10 @@
         //     bindings = <&kp TAB>;
         //     key-positions = <26 25>;
         // };
+        c {
+            bindings = <&caps_word>;
+            key-positions = <3 8>;
+        };
 
         d {
             bindings = <&kp LC(BACKSPACE)>;

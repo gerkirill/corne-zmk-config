@@ -122,9 +122,9 @@
          rsymbol_layer {
             label = "3";
             bindings = <
-&none  &none   &none   &none   &none   &none      &none   &none   &none   &none  &kp RBKT  &none
-&none  &none   &none   &none   &none   &none      &none   &none   &none   &none  &kp GRAVE &none
-&none  &none   &none   &none   &none   &none      &none   &none   &none   &none  &kp PIPE  &none
+&none  &none   &none   &none   &none   &none      &none   &none        &none       &none      &kp RBKT  &none
+&none  &none   &none   &none   &none   &none      &none   &sk LSHIFT   &sk LCTRL   &sk LALT   &kp GRAVE &none
+&none  &none   &none   &none   &none   &none      &none   &none        &none       &none      &kp PIPE  &none
                                  &none   &none   &none     &none   &none   &none
             >;
         };

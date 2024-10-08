@@ -105,7 +105,7 @@
 &none  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp MINUS   &kp EQUAL   &none
 &none  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &none
 &none  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &none
-                                        &none   &none   &none     &none   &none   &none
+                                        &none   &trans   &trans     &trans   &trans   &none
             >;
         };
 
@@ -115,7 +115,7 @@
 &none  &kp ESC     &kp RBKT  &kp RPAR  &kp RBRC  &kp GT      &none       &none      &none     &none     &kp LBKT  &none
 &none  &kp CLCK    &kp LBKT  &kp LPAR  &kp LBRC  &kp LT      &kp GT      &kp RBRC   &kp RPAR  &kp RBKT  &kp SQT   &none
 &none  &kp LC(Z)   &kp LC(X) &kp LC(C) &kp LC(V) &none       &none       &none      &none     &none     &kp BSLH  &none
-                                       &none   &none   &none     &none   &none   &none
+                                       &none   &trans   &trans     &trans   &trans   &none
             >;
         };
 
@@ -125,7 +125,7 @@
 &none  &none   &none   &none   &none   &none      &none   &none        &none       &none      &kp RBKT  &none
 &none  &none   &none   &none   &none   &none      &none   &sk LSHIFT   &sk LCTRL   &sk LALT   &kp GRAVE &none
 &none  &none   &none   &none   &none   &none      &none   &none        &none       &none      &kp PIPE  &none
-                                 &none   &none   &none     &none   &none   &none
+                                 &none   &trans   &trans     &trans   &trans   &none
             >;
         };
 
@@ -135,7 +135,7 @@
 &none       &kp N1        &kp N2          &kp N3        &kp N4        &kp N5         &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
 &none       &none         &kp LEFT_ARROW  &kp DEL       &kp RIGHT     &bt BT_CLR     &none   &none   &none   &none   &none   &none
 &none       &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bootloader    &none   &none   &none   &none   &none   &none
-                                       &none   &none   &none     &none   &none   &none
+                                       &none   &trans   &trans     &trans   &trans   &none
             >;
         };
 
@@ -145,7 +145,7 @@
 &none   &none      &none      &none       &none        &none           &none            &none            &none          &none       &none   &none
 &none   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHIFT   &none           &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW   &kp RIGHT   &none   &none
 &none   &none      &none      &none       &none        &none           &kp DEL          &kp HOME         &kp END        &none       &none   &none
-                                         &none   &none   &none     &none   &none   &none
+                                         &none   &trans   &trans     &trans   &trans   &none
             >;
         };
     };

@@ -142,9 +142,9 @@
         arrow_layer {
             label = "5";
             bindings = <
-&none   &none      &none      &none       &none        &none           &none            &none            &none          &none       &none   &none
-&none   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHIFT   &none           &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW   &kp RIGHT   &none   &none
-&none   &none      &none      &none       &none        &none           &kp DEL          &kp HOME         &kp END        &none       &none   &none
+&none   &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)   &kp LS(N5)      &kp LS(N6)       &kp LS(N7)       &kp LS(N8)     &kp MINUS   &kp EQUAL   &none
+&none   &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHIFT   &none           &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW   &kp RIGHT   &none       &none
+&none   &none       &none       &none       &none        &none           &kp DEL          &kp HOME         &kp END        &none       &none       &none
                                          &none   &trans   &trans     &trans   &trans   &none
             >;
         };

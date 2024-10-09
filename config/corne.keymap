@@ -31,52 +31,52 @@
     combos {
         compatible = "zmk,combos";
 
-        a {
+        we {
             bindings = <&kp ESCAPE>;
             key-positions = <3 2>;
         };
 
-        c {
+        ei {
             bindings = <&caps_word>;
             key-positions = <3 8>;
         };
 
-        d {
+        hy {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <18 6>;
         };
 
-        e {
+        hn {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <18 30>;
         };
 
-        f {
+        tg {
             bindings = <&kp SQT>;
             key-positions = <17 5>;
         };
 
-        g {
+        gb {
             bindings = <&kp DQT>;
             key-positions = <17 29>;
         };
 
-        i {
+        fr {
             bindings = <&kp MINUS>;
             key-positions = <16 4>;
         };
 
-        k {
+        fv {
             bindings = <&kp UNDER>;
             key-positions = <16 28>;
         };
 
-        l {
+        ju {
             bindings = <&kp PLUS>;
             key-positions = <19 7>;
         };
 
-        m {
+        jm {
             bindings = <&kp EQUAL>;
             key-positions = <19 31>;
         };
